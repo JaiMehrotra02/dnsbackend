@@ -27,5 +27,5 @@ app.use(express.static(path.join(__dirname, './dns-manager/build')));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, './dns-manager/build/index.html')));
 
 // Start the server
-const PORT = config.port || 3001;
+const PORT = config.baseurl || 3001;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
